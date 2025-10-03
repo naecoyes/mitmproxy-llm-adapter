@@ -2,6 +2,38 @@
 
 A mitmproxy-based adapter that redirects OpenAI API calls to local LLM services with model name translation
 
+## Installation
+
+### Install mitmproxy
+```bash
+# Using pip
+pip install mitmproxy
+
+# Using conda
+conda install -c conda-forge mitmproxy
+
+# Using brew (macOS)
+brew install mitmproxy
+```
+
+### Install Ollama (for local LLM backend)
+```bash
+# macOS
+brew install ollama
+
+# Linux
+curl -fsSL https://ollama.com/install.sh | sh
+
+# Windows
+# Download from https://ollama.com/download
+```
+
+### Start Ollama service
+```bash
+# Start Ollama (runs on http://127.0.0.1:11434 by default)
+ollama serve
+```
+
 ## Quick Start
 
 ### 1. Domain Redirection

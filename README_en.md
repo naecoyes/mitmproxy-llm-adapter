@@ -1,6 +1,6 @@
-# mitmproxy-llm-adapter
+# LLM API Adapter
 
-A mitmproxy-based adapter that redirects OpenAI API calls to local LLM services with model name translation
+A mitmproxy-based adapter that intercepts OpenAI API requests and forwards them to local LLM services like Ollama, with model name translation.
 
 ## Quick Start
 
@@ -67,3 +67,4 @@ export OPENAI_API_KEY="your-api-key"
 - Ensure Ollama service runs on port 11434
 - Recommended to use model copying instead of modifying original models
 - Adjust model mappings as needed
+- Both adapters are independent - use one at a time

@@ -28,6 +28,20 @@ curl -fsSL https://ollama.com/install.sh | sh
 # Download from https://ollama.com/download
 ```
 
+### Setup mitmproxy certificates
+```bash
+# Generate certificates (first time setup)
+mitmproxy --mode reverse:http://127.0.0.1:11434
+
+# On first run, press 'q' to quit and certificates will be generated
+# Certificates location:
+#   macOS: ~/.mitmproxy/
+#   Linux: ~/.mitmproxy/
+#   Windows: %APPDATA%\mitmproxy\
+
+# Install certificate on your system/browser as needed for HTTPS interception
+```
+
 ### Start Ollama service
 ```bash
 # Start Ollama (runs on http://127.0.0.1:11434 by default)
